@@ -13,10 +13,12 @@ We will use python 3.7.2 for this project. Ensure that you have already python 3
 
 `python3.7 --version`
 
-You can also create a virtual environmnet (which is a good practice) for this project in the repository directory
+You should create a virtual environmnet (which is a good practice) for this project in the repository directory if specified python version is not your default python.
 
 `python3.7 -m venv env`
 
 (Remember to actiavte the environment before working on)
 
 `source env/bin/activate`
+
+From now on all `python` commands will mean specified python version is being used.
