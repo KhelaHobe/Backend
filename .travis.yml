@@ -1,6 +1,6 @@
 language: python
 python:
-  - "3.7"
+  - "3.6"
 
 # The important part is to install pytest, pytest-cov that allows us to generate the coverage report on the Travis-CI server. 
 # We also need to install coveralls that can submit the the report to the Coveralls.io site.  
