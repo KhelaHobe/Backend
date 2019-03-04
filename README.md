@@ -3,6 +3,20 @@ Project Khelahobe is an online social application where users can create and joi
 
 # Project setup
 
+## Download
 Get the repository in local machine
 
 `git clone https://github.com/FarsanRashid/KhelaHobe.git`
+
+## Setup Python
+We will use python 3.7.2 for this project. Ensure that you have already python 3.7.2 installed
+
+`python3.7 --version`
+
+You can also create a virtual environmnet (which is a good practice) for this project in the repository directory
+
+`python3.7 -m venv env`
+
+(Remember to actiavte the environment before working on)
+
+`source env/bin/activate`
