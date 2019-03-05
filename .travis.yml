@@ -13,6 +13,6 @@ before_script:
   - pip install pytest-cov
   - pip install coveralls
 script:
-  - pytest --cov
+  - pytest --cov=UnitTests/
 after_success:
 - coveralls 
