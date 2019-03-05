@@ -11,13 +11,13 @@ Get the repository in local machine
 `git clone https://github.com/KhelaHobe/Backend.git`
 
 ## Setup Python
-We will use python 3.7.2 for this project. Ensure that you have already python 3.7.2 installed
+We will use python 3.6 for this project. Ensure that you have already python 3.6 installed
 
-`python3.7 --version`
+`python3.6 --version`
 
 You should create a virtual environmnet (which is a good practice) for this project in the repository directory if specified python version is not your default python.
 
-`python3.7 -m venv env`
+`python3.6 -m venv env`
 
 (Remember to actiavte the environment before working on)
 
