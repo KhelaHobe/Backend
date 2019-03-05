@@ -15,6 +15,6 @@ before_script:
   - pip install pylint
 script:
   - pytest --cov=UnitTests/
-  - pylint Source/*.py
 after_success:
-- coveralls 
+  - coveralls
+  - pylint Source/*.py
