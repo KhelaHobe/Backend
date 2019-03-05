@@ -10,7 +10,7 @@ Get the repository in local machine
 
 `git clone https://github.com/KhelaHobe/Backend.git`
 
-## Setup Python
+## Setup python
 We will use python 3.6 for this project. Ensure that you have already python 3.6 installed
 
 `python3.6 --version`
@@ -24,3 +24,16 @@ You should create a virtual environmnet (which is a good practice) for this proj
 `source env/bin/activate`
 
 From now on all `python` commands will mean specified python version is being used.
+
+## Unit test
+We will use pytest 4.3. Test files are under UnitTests folder. Run unit tests using 
+`pytest UnitTests/`
+
+## Code lint
+We will use pylint 2.3. [PEP8](https://www.python.org/dev/peps/pep-0008/) guide will be followed. Source folder contains sample.py which contains example of PEP8 style python codes
+
+## CI
+Will use [travis](https://travis-ci.com/KhelaHobe/Backend) for continuous integration, .travis.yml file is the configuration for travis.
+
+## Coverage
+To display unit testing coverage will use [coveralls](https://coveralls.io/github/KhelaHobe/Backend). Travis will post unit test report to coverage.
