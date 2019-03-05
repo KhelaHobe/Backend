@@ -1,3 +1,6 @@
+#We will use PEP8 convention, this a modified source file of a google styled python
+#file where PEP8 is satisfied
+
 # -*- coding: utf-8 -*-
 """Example Google style docstrings.
 
@@ -16,7 +19,7 @@ Section breaks are created by resuming unindented text. Section breaks
 are also implicitly created anytime a new section starts.
 
 Attributes:
-    module_level_variable1 (int): Module level variables may be documented in
+    MODULE_LEVEL_VARIABLE1 (int): Module level variables may be documented in
         either the ``Attributes`` section of the module docstring, or in an
         inline docstring immediately following the variable.
 
@@ -33,9 +36,9 @@ Todo:
 
 """
 
-module_level_variable1 = 12345
+MODULE_LEVEL_VARIABLE1 = 12345
 
-module_level_variable2 = 98765
+MODULE_LEVEL_VARIABLE2 = 98765
 """int: Module level variable documented inline.
 
 The docstring may span multiple lines. The type may optionally be specified
@@ -61,6 +64,7 @@ def function_with_types_in_docstring(param1, param2):
         https://www.python.org/dev/peps/pep-0484/
 
     """
+    print(param1 + param2)
 
 
 def function_with_pep484_type_annotations(param1: int, param2: str) -> bool:
@@ -74,70 +78,18 @@ def function_with_pep484_type_annotations(param1: int, param2: str) -> bool:
         The return value. True for success, False otherwise.
 
     """
+    print(param1 + param2)
 
 
-def module_level_function(param1, param2=None, *args, **kwargs):
-    """This is an example of a module level function.
 
-    Function parameters should be documented in the ``Args`` section. The name
-    of each parameter is required. The type and description of each parameter
-    is optional, but should be included if not obvious.
-
-    If \*args or \*\*kwargs are accepted,
-    they should be listed as ``*args`` and ``**kwargs``.
-
-    The format for a parameter is::
-
-        name (type): description
-            The description may span multiple lines. Following
-            lines should be indented. The "(type)" is optional.
-
-            Multiple paragraphs are supported in parameter
-            descriptions.
-
-    Args:
-        param1 (int): The first parameter.
-        param2 (:obj:`str`, optional): The second parameter. Defaults to None.
-            Second line of description should be indented.
-        *args: Variable length argument list.
-        **kwargs: Arbitrary keyword arguments.
-
-    Returns:
-        bool: True if successful, False otherwise.
-
-        The return type is optional and may be specified at the beginning of
-        the ``Returns`` section followed by a colon.
-
-        The ``Returns`` section may span multiple lines and paragraphs.
-        Following lines should be indented to match the first line.
-
-        The ``Returns`` section supports any reStructuredText formatting,
-        including literal blocks::
-
-            {
-                'param1': param1,
-                'param2': param2
-            }
-
-    Raises:
-        AttributeError: The ``Raises`` section is a list of all exceptions
-            that are relevant to the interface.
-        ValueError: If `param2` is equal to `param1`.
-
-    """
-    if param1 == param2:
-        raise ValueError('param1 may not be equal to param2')
-    return True
-
-
-def example_generator(n):
+def example_generator(no_var):
     """Generators have a ``Yields`` section instead of a ``Returns`` section.
 
     Args:
-        n (int): The upper limit of the range to generate, from 0 to `n` - 1.
+        n (int): The upper limit of the range to generate, from 0 to `no_var` - 1.
 
     Yields:
-        int: The next number in the range of 0 to `n` - 1.
+        int: The next number in the range of 0 to `no_var` - 1.
 
     Examples:
         Examples should be written in doctest format, and should illustrate how
@@ -147,7 +99,7 @@ def example_generator(n):
         [0, 1, 2, 3]
 
     """
-    for i in range(n):
+    for i in range(no_var):
         yield i
 
 
@@ -174,11 +126,12 @@ class ExampleError(Exception):
     """
 
     def __init__(self, msg, code):
+        super().__init__()
         self.msg = msg
         self.code = code
 
 
-class ExampleClass(object):
+class ExampleClass():
     """The summary line for a class docstring should fit on one line.
 
     If the class has public attributes, they may be documented here
@@ -241,7 +194,7 @@ class ExampleClass(object):
 
     @readwrite_property.setter
     def readwrite_property(self, value):
-        value
+        self.attr1 = value
 
     def example_method(self, param1, param2):
         """Class methods are similar to regular functions.
@@ -257,23 +210,8 @@ class ExampleClass(object):
             True if successful, False otherwise.
 
         """
+        self.attr2 = param1 + param2
         return True
-
-    def __special__(self):
-        """By default special members with docstrings are not included.
-
-        Special members are any methods or attributes that start with and
-        end with a double underscore. Any special member with a docstring
-        will be included in the output, if
-        ``napoleon_include_special_with_doc`` is set to True.
-
-        This behavior can be enabled by changing the following setting in
-        Sphinx's conf.py::
-
-            napoleon_include_special_with_doc = True
-
-        """
-        pass
 
     def __special_without_docstring__(self):
         pass
@@ -291,7 +229,6 @@ class ExampleClass(object):
             napoleon_include_private_with_doc = True
 
         """
-        pass
 
     def _private_without_docstring(self):
         pass
