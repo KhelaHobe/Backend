@@ -27,10 +27,13 @@ From now on all `python` commands will mean specified python version is being us
 
 ## Unit test
 We will use pytest 4.3. Test files are under UnitTests folder. Run unit tests using 
+
 `pytest UnitTests/`
 
 ## Code lint
-We will use pylint 2.3. [PEP8](https://www.python.org/dev/peps/pep-0008/) guide will be followed. Source folder contains sample.py which contains example of PEP8 style python codes
+We will use pylint 2.3. [PEP8](https://www.python.org/dev/peps/pep-0008/) guide will be followed. Source folder contains sample.py which contains example of PEP8 style python codes. Code linting can be performed as following
+
+`pylint Source/*.py`
 
 ## CI
 Will use [travis](https://travis-ci.com/KhelaHobe/Backend) for continuous integration, .travis.yml file is the configuration for travis.
