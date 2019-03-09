@@ -30,8 +30,8 @@ We will use pytest 4.3. Test files are under UnitTests folder. Run unit tests us
 
 `pytest UnitTests/`
 
-## Code lint
-We will use pylint 2.3. [PEP8](https://www.python.org/dev/peps/pep-0008/) guide will be followed. Source folder contains sample.py which contains example of PEP8 style python codes. Code linting can be performed as following
+## Coding standard
+We will follow [PEP8](https://www.python.org/dev/peps/pep-0008/) guide and use pylint 2.3 to make sure style guide is being followed. Source folder contains sample.py which contains example of PEP8 style python codes. Code linting can be performed as following
 
 `pylint Source/`
 
