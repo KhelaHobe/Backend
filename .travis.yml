@@ -13,6 +13,7 @@ before_script:
   - pip install pytest-cov
   - pip install coveralls
   - pip install pylint
+  - pip install --upgrade google-auth
 script:
   - pytest --cov=UnitTests/
   - pylint Source/*.py
