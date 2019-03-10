@@ -15,7 +15,7 @@ before_script:
   - pip install pylint
   - pip install google-auth
 script:
-  - pytest --cov=UnitTests/
+  - pytest --cov=Source/ UnitTests/
   - pylint Source/*.py
 after_success:
   - coveralls
